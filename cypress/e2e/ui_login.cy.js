@@ -28,6 +28,10 @@ describe('UI Confirmation Tests for Ultimate QA Login Validation Demo', () => {
     })
 
     it('Confirm Sign In button is present at top of form', () => {
+      cy.contains('Create a new account')
+    })
+
+    it('Confirm Create a new account button is present at top of form', () => {
       cy.contains('Sign In').click()
       cy.contains('Invalid email or password').should('not.exist')
 

@@ -22,13 +22,21 @@ To install cypress:
    ```
 
 5. For these tests, an E2E test framework was chosen.
-   You have two choices from here, you can either:
+
+   You have two choices from here to start off with, you can either:
      - create E2E folder inside the new ```cypress``` folder
-     - or you can run ```npx cypress run```
-       - When ```npx cypress run``` is run, the cypress browser UI will appear. You will then be given the choice of an E2E Testing or a Component Testing framework. Click E2E Testing.
+     - or you can run ```npx cypress open```
+
+       - When ```npx cypress open``` is run, the cypress browser UI will appear. You will then be given the choice of an E2E Testing or a Component Testing framework. Click E2E Testing.
        - You will then be given the option of browsers, click on Chrome.
+       - You also have the option to select 'New Spec,' which will be given you an example of a basic framework to begin writing tests.
+   For these test examples:
        - You will then see the list of test classes. Clicking on any of them will immediately cause the tests in that class to run.
-       - You also have the option to select 'New Spec,' which will given you an example of a basic framework to begin writing tests.
-       - The test classes that you can see are found in the E2E folder that was created. 
+       - The test classes that you can see are found in the E2E folder that was created.
+      
+6. You can also run these tests headlessly in the terminal. To do this:
+   - Ensure you are in the root of your project, otherwise cypress will not be able to find the tests and will create a new instance of Cypress. If this occurs, you can simply delete it.
+   - Run ```npx cypress run``` - this will then find the E2E folder that was created, and run all the test classes that are in that folder
+   - If you wish to run a test class on its own, an example command is ```npx cypress run --spec "cypress/e2e/login_data_validation.cy.js"```
    
 

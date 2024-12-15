@@ -39,7 +39,7 @@ To install cypress:
    - Run ```npx cypress run``` - this will then find the E2E folder that was created, and run all the test classes that are in that folder
    - If you wish to run a test class on its own, an example command is ```npx cypress run --spec "cypress/e2e/login_data_validation.cy.js"```
   
-##Running tests with reports
+## Running tests with reports
 
 This test suite has been set up to use Mochawesome test reports.
 

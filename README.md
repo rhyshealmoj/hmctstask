@@ -1,4 +1,4 @@
-These tests are written in Cypress/Javascipt
+## These tests are written in Cypress/Javascipt
 
 To install cypress:
 
@@ -38,5 +38,28 @@ To install cypress:
    - Ensure you are in the root of your project, otherwise cypress will not be able to find the tests and will create a new instance of Cypress. If this occurs, you can simply delete it.
    - Run ```npx cypress run``` - this will then find the E2E folder that was created, and run all the test classes that are in that folder
    - If you wish to run a test class on its own, an example command is ```npx cypress run --spec "cypress/e2e/login_data_validation.cy.js"```
+  
+## Running tests with reports
+
+This test suite has been set up to use Mochawesome test reports.
+
+However, you will need to install the following:
+
+```
+npm install mochawesome
+npm install mochawesome mochawesome-report-generator
+npm install mochawesome-merge
+```
+To run with full suite and generate the report, use
+```
+npm cypress run
+```
+You can also run a test class on its own by using this, appended with ```--spec "cypress/e2e/login_data_validation.cy.js"```
+
+Running this will cause HTML to be generated, which can then be used as part of CI reporting process. 
+This can be found in the ```\cypress\reports\html``` folder in the repo.
+
+
+
    
 

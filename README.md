@@ -52,12 +52,12 @@ npm install mochawesome-merge
 ```
 To run with full suite and generate the report, use
 ```
-npm run cy:run
+npm cypress run
 ```
 You can also run a test class on its own by using this, appended with ```--spec "cypress/e2e/login_data_validation.cy.js"```
 
 Running this will cause HTML to be generated, which can then be used as part of CI reporting process. 
-This can be found in the ```\cypress\reports\html``` folder in the repo
+This can be found in the ```\cypress\reports\html``` folder in the repo.
 
 
 

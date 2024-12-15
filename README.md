@@ -1,4 +1,4 @@
-These tests are written in Cypress/Javascipt
+## These tests are written in Cypress/Javascipt
 
 To install cypress:
 
@@ -39,7 +39,7 @@ To install cypress:
    - Run ```npx cypress run``` - this will then find the E2E folder that was created, and run all the test classes that are in that folder
    - If you wish to run a test class on its own, an example command is ```npx cypress run --spec "cypress/e2e/login_data_validation.cy.js"```
   
-Running tests with reports
+##Running tests with reports
 
 This test suite has been set up to use Mochawesome test reports.
 
@@ -47,6 +47,10 @@ To run with full suite and generate the report, use
 ```
 npm run cy:run
 ```
+You can also run a test class on its own by using this, appended with ```--spec "cypress/e2e/login_data_validation.cy.js"```
+
+Running this will cause a HTML to be generated, which can then be used as part of CI reporting process. 
+This can be found in the ```\mochawesome-report``` folder in the repo
 
 
    

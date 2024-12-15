@@ -19,3 +19,9 @@ import 'cypress-mochawesome-reporter/register';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+Cypress.Commands.add('signIn', (email, password) => {
+    cy.get('input[name="user[email]"]').type(email)
+    cy.get('input[name="user[password]"]').type(password)
+    cy.contains('Sign in').click()
+  });

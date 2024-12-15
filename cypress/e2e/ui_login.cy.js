@@ -1,9 +1,5 @@
 describe('UI Confirmation Tests for Ultimate QA Login Validation Demo', () => {
 
-    beforeEach(() => {
-        cy.visit('/')
-    })
-
     it('Confirm username field is present and information can be entered', () => {
       cy.get('input[name="user[email]"]').type("data can be input")
     })

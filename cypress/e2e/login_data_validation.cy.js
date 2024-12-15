@@ -1,14 +1,9 @@
 describe('Login Data Validation Tests for Ultimate QA Login Validation Demo', () => {
 
-    beforeEach(() => {
-        cy.visit('/')
-    })
-
     it('Username and password is valid', () => {        
         cy.get('input[name="user[email]"]').type("email@email.com")
         cy.get('input[name="user[password]"]').type(Cypress.env('user_password'))
         cy.contains('Sign in').click()
-
         
         cy.get('.student-dashboard__welcome')
         .invoke('text')        

@@ -38,5 +38,16 @@ To install cypress:
    - Ensure you are in the root of your project, otherwise cypress will not be able to find the tests and will create a new instance of Cypress. If this occurs, you can simply delete it.
    - Run ```npx cypress run``` - this will then find the E2E folder that was created, and run all the test classes that are in that folder
    - If you wish to run a test class on its own, an example command is ```npx cypress run --spec "cypress/e2e/login_data_validation.cy.js"```
+  
+Running tests with reports
+
+This test suite has been set up to use Mochawesome test reports.
+
+To run with full suite and generate the report, use
+```
+npm run cy:run
+```
+
+
    
 

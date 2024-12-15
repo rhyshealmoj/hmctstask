@@ -6,12 +6,16 @@ describe('Login Data Validation Tests for Ultimate QA Login Validation Demo', ()
 
     it('Username and password is valid', () => {        
         cy.get('input[name="user[email]"]').type("email@email.com")
-        cy.get('input[name="user[password]"]').type("password")
+        cy.get('input[name="user[password]"]').type(Cypress.env('user_password'))
         cy.contains('Sign in').click()
 
         
         cy.get('.student-dashboard__welcome')
-        .should('have.text', 'Welcome back, Auto T!');
+        .invoke('text')        
+        .then((text) => {
+        const cleanedText = text.replace(/(\r\n|\n|\r)/g, '').trim();  
+        expect(cleanedText).to.equal('Welcome back, Auto T!');
+        });
         
         //checks user page is reached
         //checks text links
@@ -23,8 +27,19 @@ describe('Login Data Validation Tests for Ultimate QA Login Validation Demo', ()
         //checks elements
         //course card
         cy.get('.card__body--large')
+        
         //user drop down
-        cy.get('.dropdown__toggle-button').should('have.text', 'Auto T')
+        cy.get('.dropdown__toggle-button')
+        .invoke('text')               
+        .then((text) => {
+        
+        const cleanedText = text.replace(/(\r\n|\n|\r)/g, '')    
+        .replace(/\s+/g, '')           
+        .trim();                       
+
+        expect(cleanedText).to.equal('AutoT');                   
+        });
+
         //my dashboard element
         cy.get('.header__nav-item--default')
         //search bar is available can be populated

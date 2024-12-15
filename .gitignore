@@ -1,4 +1,4 @@
 node_modules/
 /cypress/screenshots/
 /cypress/reports/
-/cypress/cypress.env.json
+/cypress/cypress.env.json/

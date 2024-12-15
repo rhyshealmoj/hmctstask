@@ -43,14 +43,39 @@ To install cypress:
 
 This test suite has been set up to use Mochawesome test reports.
 
+However, you will need to install the following:
+
+```
+npm install mochawesome
+npm install mochawesome mochawesome-report-generator
+npm install mochawesome-merge
+```
 To run with full suite and generate the report, use
 ```
 npm run cy:run
 ```
 You can also run a test class on its own by using this, appended with ```--spec "cypress/e2e/login_data_validation.cy.js"```
 
-Running this will cause a HTML to be generated, which can then be used as part of CI reporting process. 
-This can be found in the ```\mochawesome-report``` folder in the repo
+Running this will cause HTMLs to be generated, which can then be used as part of CI reporting process. 
+This can be found in the ```\reports``` folder in the repo
+
+This will generate individual reports per test class, and these will need to be merged together and converted to HTML. This will ordinarily be done as part of the CI process, however, for this it will need to be done manually.
+
+First you will need to find where the json files have saved and edit the following command
+
+```
+npx mochawesome-merge {relative address\reports\mochawesome/*.json -o {relative address}\reports\mochawesome/merged/report.json
+
+```
+
+This will merge the reports into a JSON file. To convert this to HTML, you need to run the following command:
+
+```
+npx marge {relative address}\reports\mochawesome\merged\report.json -o {relative address}\reports\mochawesome\merged\html
+
+```
+
+This will then generate a html report that can be opened in your browser. 
 
 
    

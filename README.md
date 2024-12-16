@@ -1,5 +1,8 @@
 ## These tests are written in Cypress/Javascipt
 
+The login UI under test is:
+```https://courses.ultimateqa.com/users/sign_in```
+
 To install cypress:
 
 1. First ensure that you have node/npm installed. Run the following to check the versions that you have installed:

@@ -11,7 +11,6 @@ describe('UI Confirmation Tests for Ultimate QA Login Validation Demo', () => {
     it('Confirm Remember Me radio checkbox is present can be clicked', () => {
       cy.contains('Remember me').should('be.visible')
       cy.contains('Remember me').click()
-      
     })
 
     it('Confirm Forgot Password button is present and can be clicked', () => {

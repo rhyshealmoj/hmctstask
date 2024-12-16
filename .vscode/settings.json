@@ -1,6 +1,6 @@
 {
-    "eslint.enable": false,
     "eslint.validate": [
         "javascript"
-    ]
+    ],
+    "eslint.enable": false,
 }
